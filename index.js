@@ -16,6 +16,7 @@ app.use("/Pupuk", pupukRoute);
 
 app.get("/", (req, res) => {
     console.log(['GET ROUTE']);
+    
     res.send("Welcome Petani Nusantara");
 });
 
