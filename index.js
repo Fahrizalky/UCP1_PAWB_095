@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import bibitRoute from "./routes/bibitTanaman.js";
-
+import pupukRoute from "./routes/Pupuk.js";
 
 
 const app = express();
