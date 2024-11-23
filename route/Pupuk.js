@@ -4,7 +4,9 @@ const pupuk = [
     {
         id: 2,
         nama: "Urea",
-        
+        tahun_produksi: "2023",
+        tahun_exp: "2025",
+        jenis_pupuk: "Cair"
         
 
     },
