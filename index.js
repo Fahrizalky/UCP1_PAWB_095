@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
-import bibitRoute from "./routes/bibitTanaman.js";
-import pupukRoute from "./routes/Pupuk.js";
+import bibitRoute from "./route/BibitTanaman.js";
+import pupukRoute from "./route/Pupuk.js";
 
 
 const app = express();
@@ -16,7 +16,7 @@ app.use("/Pupuk", pupukRoute);
 
 app.get("/", (req, res) => {
     console.log(['GET ROUTE']);
-    
+
     res.send("Welcome Petani Nusantara");
 });
 
