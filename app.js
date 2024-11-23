@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-
 const todoRoutes = require('./routes/todo.js');
+const {json}= require('body-parser')
 const port = 3000;
 
 app.use(express.json());
