@@ -11,7 +11,8 @@ app.use(bodyParser.json());
 
 // Menambahkan setiap rute dengan variabel yang unik
 app.use("/Bibit", bibitRoute);
-app.use("/Pupuk", pupukRoute);
+
+
 
 app.get("/", (req, res) => {
     console.log(['GET ROUTE']);
