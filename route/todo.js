@@ -9,7 +9,13 @@ const todos =[
     {id: 1,
         tugas: "data pertama",
     },
-    
+    {id : 2,
+        tugas: "data kedua",
+
+    }
+]
+
+
 
 
 
