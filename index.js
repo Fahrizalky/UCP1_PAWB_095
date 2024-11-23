@@ -9,7 +9,7 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 
-// Menambahkan setiap rute dengan variabel yang unik
+// menambahkan agar bisa di panggil
 app.use("/Bibit", bibitRoute);
 app.use("/Pupuk", pupukRoute);
 
