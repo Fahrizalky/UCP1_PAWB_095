@@ -1,15 +1,17 @@
-    //Endpoint untuk mendapatkan data todos
-    router.get('/', (req, res) => {res.json(todos); });
+const { json } = require('body-parser');
+const express = require('express');
+const router = express.Router; 
 
-    router.post('/', (req, res) => {
-        const newTodo = {
-        id: todos.length + 1,
-        task: req.body.task,
-        completed: false
-    };
-todos.push(newTodo);
-res.status(201).json(newTodo)}
-);
+
+Route.get('/',(req, res)=> {res.json(todos);});
+
+const todos =[
+    {id: 1,
+        tugas: "data pertama",
+    },
+    
+
+
 
 module.exports = router;
 
@@ -17,11 +19,11 @@ router.delete('/:id', (req, res) => {
     const todoIndex = todos.findIndex(t => t.id === parseInt(req.params.id));
     if (todoIndex === -1) return res.status(404).json({ message: 'Tugas tidak ditemukan' });
 
-    const deletedTodo = todos.splice(todoIndex, 1)[0]; // Menghapus dan menyimpan todo yang dihapus
+    const deletedTodo = todos.splice(todoIndex, 1)[0];
     res.status(200).json({ message: `Tugas '${deletedTodo.task}' telah dihapus` });
 });
 
-// Endpoint untuk memperbarui tugas
+//
 router.put('/:id', (req, res) => {
     const todo = todos.find(t => t.id === parseInt(req.params.id));
     if (!todo) return res.status(404).json({ message: 'Tugas tidak ditemukan' });
